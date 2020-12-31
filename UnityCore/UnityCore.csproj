@@ -1,0 +1,258 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6EF40818-283C-4F9F-9148-D5200288C3E5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UnityCore</RootNamespace>
+    <AssemblyName>UnityCore</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\解决方案\bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+    <DocumentationFile>..\..\解决方案\bin\UnityCore.xml</DocumentationFile>
+    <NoWarn>1591;</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\UnityCore.xml</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UnityEngine, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\dll\Unity\2017.4.24f1\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\dll\Unity\2017.4.24f1\UnityEngine.UI.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Console\ConsoleConfig.cs" />
+    <Compile Include="Console\GameP2PDef.cs" />
+    <Compile Include="Console\ICompareMono.cs" />
+    <Compile Include="Console\MemoryDataNode.cs" />
+    <Compile Include="Console\MonoReflection.cs" />
+    <Compile Include="Console\ProfilerMsgMono.cs" />
+    <Compile Include="Console\ProfilerMsg.cs" />
+    <Compile Include="Console\SerGameObject.cs" />
+    <Compile Include="Curve\CqCurve.cs" />
+    <Compile Include="Curve\CqCurvePoint.cs" />
+    <Compile Include="Draw\HelpLine\DrawCalc.cs" />
+    <Compile Include="Draw\HelpLine\HelpDraw.cs" />
+    <Compile Include="Draw\HelpLine\HelpDrawMono.cs" />
+    <Compile Include="Draw\HelpLine\HelpDrawStyle.cs" />
+    <Compile Include="Draw\HelpLine\HelpGraphics.cs" />
+    <Compile Include="Console\ConnectConsole.cs" />
+    <Compile Include="Draw\HelpLine\HelpLineData.cs" />
+    <Compile Include="Draw\Inspector\AllowMethodAttribute.cs" />
+    <Compile Include="Draw\Inspector\ControlProperty\ComBox\DisplayMemberAttribute.cs" />
+    <Compile Include="Draw\Inspector\ControlProperty\Common\MinHeightAttribute.cs" />
+    <Compile Include="Draw\Inspector\ControlProperty\ComponentMemberAttribute.cs" />
+    <Compile Include="Draw\Inspector\ControlProperty\IGetComMemberAttribute.cs" />
+    <Compile Include="Draw\Inspector\ControlProperty\IGetTypeAttribute.cs" />
+    <Compile Include="Draw\Inspector\ControlProperty\OnValueChangedAttribute.cs" />
+    <Compile Include="Draw\Inspector\Controls\ColorAttribute.cs" />
+    <Compile Include="Draw\Inspector\Controls\ObjectLabelAttribute.cs" />
+    <Compile Include="Draw\Inspector\Controls\TorsionValueAttribute.cs" />
+    <Compile Include="Input\BaseInput.cs" />
+    <Compile Include="Lod\CqLodGroup.cs" />
+    <Compile Include="Mgr\ActionMgr.cs" />
+    <Compile Include="MVL\ActiveProperty.cs" />
+    <Compile Include="Camera\CameraColBase.cs" />
+    <Compile Include="Camera\CameraInputCol.cs" />
+    <Compile Include="Camera\CameraGyro.cs" />
+    <Compile Include="Curve\Curve2D.cs" />
+    <Compile Include="MVL\Child\LinkCallBack.cs" />
+    <Compile Include="MVL\Child\LinkMemberTween.cs" />
+    <Compile Include="MVL\Child\LinkMethodByClick.cs" />
+    <Compile Include="MVL\Container\IListMono.cs" />
+    <Compile Include="Profiler\CqProfiler.cs" />
+    <Compile Include="Coroutine\Tween\Handle\CqTweenBezier.Type.cs" />
+    <Compile Include="Coroutine\Tween\Handle\CqTweenLerp.Type.cs" />
+    <Compile Include="Coroutine\Tween\Handle\CqTweenMember.cs" />
+    <Compile Include="UGUI\ScrollGrid\ScrollGrid.cs" />
+    <Compile Include="UGUI\ScrollGrid\ScrollGridItem.cs" />
+    <Compile Include="Util\MonoBehaviourExtended.cs" />
+    <Compile Include="Curve\TweenCurvePath.cs" />
+    <Compile Include="MVL\Base\LinkBase.cs" />
+    <Compile Include="MVL\Base\LinkChild.cs" />
+    <Compile Include="MVL\Base\LinkParent.cs" />
+    <Compile Include="MVL\Child\LinkMember.cs" />
+    <Compile Include="MVL\Child\LinkMethod.cs" />
+    <Compile Include="MVL\Container\ISetGetEnumerable.cs" />
+    <Compile Include="MVL\Container\LinkObjItem.cs" />
+    <Compile Include="MVL\Container\LinkObjList.cs" />
+    <Compile Include="MVL\Container\LinkObject.cs" />
+    <Compile Include="MVL\Container\LinkItem.cs" />
+    <Compile Include="MVL\Container\LinkList.cs" />
+    <Compile Include="Scene\Base\SceneEditAttribute.cs" />
+    <Compile Include="Scene\More\CurveEditAttribute.cs" />
+    <Compile Include="Scene\More\VectorEditAttribute.cs" />
+    <Compile Include="Scene\More\PolygonEditAttribute.cs" />
+    <Compile Include="Draw\Inspector\Controls\ListBoxAttribute.cs" />
+    <Compile Include="Draw\Inspector\ExtendInspectorAttribute.cs" />
+    <Compile Include="Draw\Inspector\InpectorDrawStyleAttribute.cs" />
+    <Compile Include="Input\TouchInputOne.cs" />
+    <Compile Include="Input\KeyBoardInput.cs" />
+    <Compile Include="Input\MouseInput.cs" />
+    <Compile Include="Input\TouchInputDouble.cs" />
+    <Compile Include="Obsolete\Model\MaterialProperty.cs" />
+    <Compile Include="PS\ImageAtlas.cs" />
+    <Compile Include="PS\RawImageAtlas.cs" />
+    <Compile Include="PS\PsdAtlas.cs" />
+    <Compile Include="Shape\PolygonBuilder.cs" />
+    <Compile Include="Struct\Segment.cs" />
+    <Compile Include="Coroutine\Tween\EaseFun.ConvertSingle.cs" />
+    <Compile Include="Coroutine\Tween\EaseFun.SingleEase.cs" />
+    <Compile Include="Coroutine\Tween\Mono\EnumTweenType.cs" />
+    <Compile Include="UGUI\Collections\ListPool.cs" />
+    <Compile Include="UGUI\Effect\Mirror.cs" />
+    <Compile Include="UGUI\Collections\Pool.cs" />
+    <Compile Include="UGUI\RoundScroll.cs" />
+    <Compile Include="UI\MoveGroup\MoveItem.cs" />
+    <Compile Include="UI\MoveGroup\MoveGroup.cs" />
+    <Compile Include="Util\AssemblyUtilByUnity.cs" />
+    <Compile Include="Util\UnityEngine\AnimationCurveUtil.cs" />
+    <Compile Include="Util\UnityEngine\ApplicationUtil.cs" />
+    <Compile Include="Util\UnityEngine\AssetBundleUtil.cs" />
+    <Compile Include="Util\UnityEngine\BezierUtil.cs" />
+    <Compile Include="Util\UnityEngine\BoundsUtil.cs" />
+    <Compile Include="Input\InputMgr.cs" />
+    <Compile Include="Draw\GUI\GUIAttribute.cs" />
+    <Compile Include="Draw\Inspector\Base\ControlPropertyAttribute.cs" />
+    <Compile Include="Draw\Inspector\Base\ControlAttribute.cs" />
+    <Compile Include="Draw\Inspector\Base\CqPropertyAttribute.cs" />
+    <Compile Include="Draw\Inspector\ControlProperty\ComBox\ItemsAttribute.cs" />
+    <Compile Include="Draw\Inspector\ControlProperty\Common\DrawRectAttribute.cs" />
+    <Compile Include="Draw\Inspector\ControlProperty\ComponentFPAttribute.cs" />
+    <Compile Include="Draw\Inspector\Controls\RectAttribute.cs" />
+    <Compile Include="Draw\Inspector\Controls\CqLabelAttribute.cs" />
+    <Compile Include="Draw\Inspector\ControlProperty\BindingFPType.cs" />
+    <Compile Include="Draw\Inspector\ControlProperty\Button\ClickAttribute.cs" />
+    <Compile Include="Draw\Inspector\ControlProperty\ComponentFPTypeAttribute.cs" />
+    <Compile Include="Draw\Inspector\ControlProperty\Common\HeightAttribute.cs" />
+    <Compile Include="Draw\Inspector\ControlProperty\Common\ToolTipAttribute.cs" />
+    <Compile Include="Draw\Inspector\ControlProperty\Common\VisibleAttribute.cs" />
+    <Compile Include="Draw\Inspector\ControlProperty\Common\IsEnabledAttribute.cs" />
+    <Compile Include="Draw\Inspector\Controls\ButtonAttribute.cs" />
+    <Compile Include="Draw\Inspector\Controls\ButtonsAttribute.cs" />
+    <Compile Include="Draw\Inspector\Controls\CheckBoxAttribute.cs" />
+    <Compile Include="Draw\Inspector\Controls\CurveAttribute.cs" />
+    <Compile Include="Draw\Inspector\Controls\ComBoxAttribute.cs" />
+    <Compile Include="Draw\Inspector\Controls\SliderAttribute.cs" />
+    <Compile Include="Draw\Inspector\Controls\TextBoxAttribute.cs" />
+    <Compile Include="Draw\Inspector\Controls\CqQuaternionAttribute.cs" />
+    <Compile Include="Draw\Inspector\Util\LinkPropertyAttribute.cs" />
+    <Compile Include="Draw\Inspector\Util\SetPropertyAttribute.cs" />
+    <Compile Include="Draw\Inspector\Util\RegexAttribute.cs" />
+    <Compile Include="ContextMenu\InspectorContextMenuItemAttribute.cs" />
+    <Compile Include="Draw\Inspector\Controls\ComponentPropertyAttribute.cs" />
+    <Compile Include="Draw\Inspector\Controls\VectorAttribute.cs" />
+    <Compile Include="ComponentProperty\ComponentProperty.cs" />
+    <Compile Include="Draw\Inspector\EditorGUIConfig.cs" />
+    <Compile Include="Mgr\DownloadMgr.cs" />
+    <Compile Include="Mgr\FileVersionMgr.cs" />
+    <Compile Include="Mgr\ResMgr.cs" />
+    <Compile Include="UI\CqChooseColor.cs" />
+    <Compile Include="Obsolete\Thread\UnityThread.cs" />
+    <Compile Include="Coroutine\Delay\UnityDelay.cs" />
+    <Compile Include="Coroutine\Tween\Follow\LerpFollow.cs" />
+    <Compile Include="Coroutine\Tween\GlobalMono.cs" />
+    <Compile Include="Coroutine\Tween\Group\CqTweenGroupItem.cs" />
+    <Compile Include="Coroutine\Tween\Mono\CqTweenControl.cs" />
+    <Compile Include="Coroutine\Tween\Mono\CqTweenInternal.cs" />
+    <Compile Include="Coroutine\Tween\Mono\CqTweenT.cs" />
+    <Compile Include="Coroutine\Tween\Mono\CqTween.Type.cs" />
+    <Compile Include="Coroutine\Tween\Group\CqTweenGroup.cs" />
+    <Compile Include="Coroutine\Tween\Mono\CqTweenData.cs" />
+    <Compile Include="Coroutine\Tween\Group\ICqTweenGroupItem.cs" />
+    <Compile Include="Coroutine\Tween\Mono\TweenMode.cs" />
+    <Compile Include="UI\RadioActive\RadioActive.cs" />
+    <Compile Include="UI\RadioActive\RadioActiveGroup.cs" />
+    <Compile Include="Util\UnityEngine\CameraUtil.cs" />
+    <Compile Include="Util\UnityEngine\ColorUtil.cs" />
+    <Compile Include="Util\Debuger.cs" />
+    <Compile Include="Util\DebugInfo.cs" />
+    <Compile Include="Util\UnityEngine\Events\UnityEventUtil.cs" />
+    <Compile Include="Util\UnityEngine\FontUtil.cs" />
+    <Compile Include="Util\UnityEngine\GameObjectUtil.cs" />
+    <Compile Include="Util\UnityEngine\ComponentUtil.cs" />
+    <Compile Include="Util\UnityEngine\CurveLinePoint.cs" />
+    <Compile Include="Util\UnityEngine\DebugUtil.cs" />
+    <Compile Include="Util\UnityEngine\EventUtil.cs" />
+    <Compile Include="Util\UnityEngine\GUILayoutUtil.cs" />
+    <Compile Include="Util\UnityEngine\Matrix4x4Util.cs" />
+    <Compile Include="Util\UnityEngine\MeshUtil.3D.cs" />
+    <Compile Include="Util\UnityEngine\MeshUtil.2D.cs" />
+    <Compile Include="Util\UnityEngine\MeshUtil.3D.Triangulation.cs" />
+    <Compile Include="Util\UnityEngine\RayUtil.cs" />
+    <Compile Include="Util\UnityEngine\RectUtil.cs" />
+    <Compile Include="Util\UnityEngine\SceneManagement\SceneManagerUtil.cs" />
+    <Compile Include="Util\UnityEngine\Texture2DUtil.cs" />
+    <Compile Include="Util\UnityEngine\TransformUtil.cs" />
+    <Compile Include="Util\UnityEngine\UI\TextUtil.cs" />
+    <Compile Include="Util\UnityEngine\SpriteUtil.cs" />
+    <Compile Include="Util\UnityEngine\BezierUtil.UniformSpeed.cs" />
+    <Compile Include="Util\UnityEngine\Vector2Util.Line.cs" />
+    <Compile Include="Util\UnityEngine\Vector2Util.Polygon.Operation.cs" />
+    <Compile Include="Util\UnityEngine\Vector2Util.Polygon.PositionRelation.cs" />
+    <Compile Include="Util\UnityEngine\Vector2Util.Polygon.Relation.cs" />
+    <Compile Include="Util\UnityEngine\Vector2Util.Polygon.cs" />
+    <Compile Include="Util\UnityEngine\Vector3Util.Sport.cs" />
+    <Compile Include="Util\UnityEngine\Vector3Util.Line.cs" />
+    <Compile Include="Util\UnityEngine\Vector3Util.cs" />
+    <Compile Include="Util\UnityEngine\Vector2Util.cs" />
+    <Compile Include="Util\UnityUtil.Runtime.cs" />
+    <Compile Include="Util\UnityUtil.Calc.cs" />
+    <Compile Include="Coroutine\Delay\ControlTimeCall.cs" />
+    <Compile Include="Util\ObjectUtil.cs" />
+    <Compile Include="Util\SceneMgr.cs" />
+    <Compile Include="Util\WinDll.File.cs" />
+    <Compile Include="Util\UnityFileUtil.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MVL\MVL说明.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CqCore\CqCore.csproj">
+      <Project>{382d3654-7614-4a95-8c05-9d585a662de5}</Project>
+      <Name>CqCore</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

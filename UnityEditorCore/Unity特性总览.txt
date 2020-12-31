@@ -1,0 +1,50 @@
+https://blog.csdn.net/l773575310/article/details/71698746
+System
+	Serializable 	序列化一个类，作为一个子属性显示在监视面板。
+	NonSerialized 	反序列化一个变量，并且在监视版上隐藏。
+UnityEngine
+	AddComponentMenu 	可以添加一个组件菜单项到编辑器里。
+	AssemblyIsEditorAssembly 	汇编级别的属性。带了这个属性的类就被认为是编辑器类。只能对于程序集有效
+	ColorUsage 	可以修改Color的配置，是否显示Alpha通道，或者使用HDR模式。
+	ContextMenu 	给脚本右键菜单添加一个自定义方法，不能是静态的。
+	ContextMenuItem 	给字段右键菜单添加一个自定义方法，不能是静态的。
+	CreateAssetMenu     修饰ScriptableObject,默认自动在Assets/Create 下添加生成脚本对应配置文件的选项.
+
+	Delayed 	用于float、int、或string变量，只有按了回车或焦点离开字段才会返回新值
+	DisallowMultipleComponent 	用于MonoBehaviour或其子类，不能重复添加这个类的组件，重复添加会弹出对话框。
+	ExecuteInEditMode 	带了这个特性的实例会直接在编辑模式下就执行，但不是像进入游戏模式那样时刻执行
+	GUITarget 	选择哪些显示器调用OnGUI函数。
+	Header 	标题特性，给监视版加一个小标题。
+	HelpURL 	给类提供一个自定义文档URL。如图可以按Ctrl+鼠标左键跳转到目标。
+	HideInInspector 	只是隐藏变量在监视板里，不改变序列化属性。
+	ImageEffectAllowedInSceneView 	使用了这个特性的图像特效可以渲染在 SceneView的摄像机上
+	ImageEffectOpaque 	可以在不透明通道直接执行图像特效。详见Unity圣典： 图像特效脚本。
+	ImageEffectTransformsToLDR 	在HDR渲染模式下，使用图像特效用LDR渲染模式。
+	Multiline 	可以让string变量在监视板上多加几行。
+	PreferBinarySerialization 	只能用于ScriptableObject 子类，用二进制序列化，有利于处理大量数据的资源文件，提升读写性能。主要缺点是二进制的文件我们看不懂，还有不能用版本控制软件合并它。
+	Property 	这个是监视板里面修改样式的抽象基类，例如显示小标题、显示多行编辑文本等等都是以它为基类。
+	Range 	在监视面板限制int或float类型变量值。但有个BUG，看右边代码，所以个人建议还是用属性（Property）配合Mathf.Clamp使用来限制数值大小。
+	RequireComponent 	自动添加需要的组件。若已存在则不额外添加。这样脚本就可以安全的使用该组件。
+	RPC 	用于Networking，但废弃了。
+	RuntimeInitializeOnLoadMethod 	不用作为组件添加到对象也可以直接自动调用初始化方法。要求方法为静态，类、方法可以为私有。当开始游戏就会调用，但有多个这种特性的方法调用顺序是不能确定的。
+	SelectionBase 	带这个特性的GameObject，如果点击本身就一定选中本身，即便父对象也有这特性；如果子对象没有带这个特性，则当在场景点击子对象时，选中的是带特性的父对象；如果父对象和父父对象都有这特性，选父对象。
+	SerializeField 	序列化字段，主要用于序列化私有字段。
+	SharedBetweenAnimators 	用于StateMachineBehaviour，类似prefab，Animator之间公用这个实例，减少内存消耗。
+	Space 	用于在监视板上加空行。
+	TextArea 	让string在监视板上显示成带滚动条的文本域。
+	Tooltip 	给监视板的字段添加小贴士。及鼠标指向字段显示的提示。
+	UnityAPICompatibilityVersion 	用来声明程序集的API版本，避免处理时是否可以用旧版本的Unity API。
+UnityEngine.Scripting
+	Preserve 可 从删除的类、 方法、 字段或属性的字节代码中 剥离出来
+UnityEditor
+	CallbackOrder 	所有带order（顺序）回调属性的特性基类。
+	CanEditMultipleObjects 	使自定义编辑器支持同编辑多个对象，一般配合CustomEditor使用类。
+	CustomEditor 	要自定义编辑器就要加这个特性。
+	CustomPreview 	添加自定义类型的preview在监视板。
+	CustomPropertyDrawer 	自定义属性渲染，如果要自定义PropertyDrawer或 DecoratorDrawer，要加上这个特性
+	DrawGizmo 	自定义Gizmo渲染方法任何组件，方法可以定义在任意类而且不用添加到组件，但必须为静态。
+	InitializeOnLoad 	当Unity工程装载时，会自动调用一个类来初始化，这个类必须有静态构造函数。
+	InitializeOnLoadMethod 	同上，只不过这个是调用静方法。
+	MenuItem 	添加菜单项，必须是静态方法。第二个参数若为true，则会先判断改方法是否返回true，若是，则可以使用，若为false，这按钮是不可用的（灰色的）。
+	PreferenceItem 	给Preference窗口添加菜单项，调用的也是静态方法(用于记录项目使用的常量)
+	

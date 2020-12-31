@@ -1,0 +1,14 @@
+﻿<Window x:Class="DevelopTool.AboutWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="关于" Height="217.241" Width="301.724" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid Margin="0,0,4,4.311">
+        <Button x:Name="button_Copy" Content="好的" HorizontalAlignment="Left" Margin="43,139,0,0" VerticalAlignment="Top" Width="75" Click="button_Copy_Click" Height="29"/>
+        <Label x:Name="label" Content="作者:&#x9;神马浮云&#xA;时间:&#x9;2015-12-06&#xA;QQ:&#x9;29797471&#xA;Email:&#x9;cqqqq2004@sina.com&#xA;&#xD;&#xA;致力于解决游戏松散系统和核心系统的解耦!&#xA;  版权所有(C)神马浮云。保留所有权利" HorizontalAlignment="Left" Margin="19,10,0,0" VerticalAlignment="Top" Height="120" Width="245"/>
+        <Button x:Name="button_Copy1" Content="联系作者" HorizontalAlignment="Left" Margin="175,139,0,0" VerticalAlignment="Top" Width="75"  Height="29" Click="button_Copy1_Click"/>
+
+    </Grid>
+</Window>
