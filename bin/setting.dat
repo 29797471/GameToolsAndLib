@@ -1,0 +1,80 @@
+{
+	saveData = 
+	[
+		DevelopTool.EventSetting
+		{
+			mAllowCommand = false;
+		},
+		DevelopTool.GameStructSetting
+		{
+			mAllowCommand = false;
+		},
+		DevelopTool.GuideSetting
+		{
+			mAllowCommand = false;
+		},
+		DevelopTool.CodeStyleNewSetting
+		{
+			mCodeSettingList = 
+			[
+			];
+			mAllowCommand = false;
+		},
+		DevelopTool.TriggerSetting
+		{
+			mAllowCommand = false;
+		},
+		DevelopTool.ExcelNewSetting
+		{
+			mStartDataRow = 2;
+			mAllowCommand = false;
+		},
+		DevelopTool.CustomStructSetting
+		{
+			mAllowCommand = false;
+		},
+		DevelopTool.FolderSetting
+		{
+			mAllowCommand = false;
+		},
+		DevelopTool.LevelMapSetting
+		{
+			mAllowCommand = false;
+		},
+		DevelopTool.TranslatorNewSetting
+		{
+			mAllowCommand = false;
+		},
+		DevelopTool.ProtoSetting
+		{
+			baseTypeList = 
+			[
+			];
+			mAllowCommand = false;
+		},
+		DevelopTool.AISetting
+		{
+			mAllowCommand = false;
+			setPath = "data/ai.dat";
+		},
+		DevelopTool.StorySetting
+		{
+			mAllowCommand = false;
+		},
+		DevelopTool.CommonStructSetting
+		{
+			mAllowCommand = false;
+		},
+		DevelopTool.ShortcutSetting
+		{
+			mAllowCommand = false;
+		},
+		DevelopTool.OtherSetting
+		{
+			mForeground = "#FF80FF";
+			mBackground = "#000000";
+			mFontSize = 10;
+			mAllowCommand = false;
+		}
+	];
+}

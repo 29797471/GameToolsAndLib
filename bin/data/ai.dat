@@ -1,0 +1,44 @@
+{
+	children = 
+	[
+		{
+			nodeObj = 
+			CqRoot
+			{
+				mDoCMD = false;
+				mName = "工具项目路径切换";
+			};
+			children = 
+			[
+				{
+					nodeObj = 
+					ModifyFile
+					{
+						mSrcPath = "..\\DevelopTool\\DevelopTool.csproj";
+						mStartStr = "<OutputPath>";
+						mEndStr = "</OutputPath>";
+						mContent = "..\\..\\CQAppProj\\研发工具\\";
+						mName = "修改文件内容";
+					};
+					children = 
+					[
+					];
+				},
+				{
+					nodeObj = 
+					ModifyFile
+					{
+						mSrcPath = "..\\DevelopTool\\CMD_DevelopTool.csproj";
+						mStartStr = "<OutputPath>";
+						mEndStr = "</OutputPath>";
+						mContent = "..\\..\\CQAppProj\\研发工具\\";
+						mName = "修改文件内容";
+					};
+					children = 
+					[
+					];
+				}
+			];
+		}
+	];
+}
