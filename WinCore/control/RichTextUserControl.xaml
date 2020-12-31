@@ -1,0 +1,90 @@
+﻿<UserControl x:Class="WinCore.RichTextUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WinCore"
+             mc:Ignorable="d" 
+             x:Name="self">
+    <UserControl.Resources>
+        <Span x:Key="ResSpan" x:Shared="False" >
+            <Run Text="{Binding Text,Mode=OneWay}" />
+            <Hyperlink Click="Hyperlink_Click">
+                <Run Text="{Binding UnderlineText,Mode=OneWay}" />
+            </Hyperlink >
+        </Span>
+    </UserControl.Resources>
+    <Border BorderThickness="1" CornerRadius="1" BorderBrush="#e0e0e0" >
+        <TextBlock x:Name="tb" TextWrapping="Wrap" Margin="5" DataContext="{Binding ElementName=self,Path=ItemsSource}"/>
+    </Border>
+    <!--
+    <TextBlock x:Name="tb" TextWrapping="Wrap" DataContext="{Binding ElementName=self,Path=ItemsSource}">
+        <TextBlock.Inlines >
+
+            <Span DataContext="{Binding Path=[0]}" >
+                <StaticResource ResourceKey="ResSpan" />
+            </Span>
+            <Span DataContext="{Binding Path=[1]}" >
+                <StaticResource ResourceKey="ResSpan" />
+            </Span>
+            <Span DataContext="{Binding Path=[2]}" >
+                <StaticResource ResourceKey="ResSpan" />
+            </Span>
+            <Span DataContext="{Binding Path=[3]}" >
+                <StaticResource ResourceKey="ResSpan" />
+            </Span>
+            <Span DataContext="{Binding Path=[4]}" >
+                <StaticResource ResourceKey="ResSpan" />
+            </Span>
+            <Span DataContext="{Binding Path=[5]}" >
+                <StaticResource ResourceKey="ResSpan" />
+            </Span>
+            <Span DataContext="{Binding Path=[6]}" >
+                <StaticResource ResourceKey="ResSpan" />
+            </Span>
+        </TextBlock.Inlines>
+    </TextBlock>
+    
+    
+    <Border BorderBrush="Gainsboro" BorderThickness="1" CornerRadius="1"  >
+        <Label >
+            <TextBlock x:Name="tb"
+                   HorizontalAlignment="{Binding ElementName=self,Path=HorizontalAlignment}" 
+                   VerticalAlignment="{Binding ElementName=self,Path=VerticalAlignment}" 
+                   TextWrapping="Wrap">
+                <TextBlock.Inlines>
+                    <InlineUIContainer>
+                        
+                    </InlineUIContainer>
+                </TextBlock.Inlines>
+            </TextBlock>
+        </Label>
+    </Border>
+    -->
+
+
+
+    <!--
+    <RichTextBox HorizontalAlignment="Left"  IsDocumentEnabled="True" IsReadOnly="True" textw
+                 DataContext="{Binding ElementName=self,Path=ItemsSource}">
+        <FlowDocument >
+            <Paragraph >
+                <Span DataContext="{Binding Path=[0]}" >
+                    <Run Text="{Binding Text,Mode=OneWay}" />
+                    <Hyperlink Click="Hyperlink_Click">
+                        <Run Text="{Binding UnderlineText,Mode=OneWay}" />
+                    </Hyperlink >
+                </Span>
+            </Paragraph>
+            <Paragraph >
+                <Span DataContext="{Binding Path=[1]}" >
+                    <Run Text="{Binding Text,Mode=OneWay}" />
+                    <Hyperlink Click="Hyperlink_Click">
+                        <Run Text="{Binding UnderlineText,Mode=OneWay}" />
+                    </Hyperlink >
+                </Span>
+            </Paragraph>
+        </FlowDocument >
+    </RichTextBox>
+     -->
+</UserControl>

@@ -1,0 +1,342 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{382D3654-7614-4A95-8C05-9D585A662DE5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CqCore</RootNamespace>
+    <AssemblyName>CqCore</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\解决方案\bin\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\..\解决方案\bin\CqCore.xml</DocumentationFile>
+    <Prefer32Bit>false</Prefer32Bit>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <NoWarn>1591;</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\CqCore.xml</DocumentationFile>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Base\SingletonMgr.cs" />
+    <Compile Include="Causality\Causality.cs" />
+    <Compile Include="Causality\Causality1_3Async.cs" />
+    <Compile Include="Causality\Causality1_2Async.cs" />
+    <Compile Include="Causality\CausalityAsync.cs" />
+    <Compile Include="Causality\Causality2_1.cs" />
+    <Compile Include="Arithmetic\Arithmetic.Abs.cs" />
+    <Compile Include="Arithmetic\Arithmetic.cs" />
+    <Compile Include="Arithmetic\Arithmetic.Parenthesis.cs" />
+    <Compile Include="Arithmetic\Arithmetic.BaseParse.cs" />
+    <Compile Include="Arithmetic\ArithmeticCalc.cs" />
+    <Compile Include="Arithmetic\CalcEnumAttribute.cs" />
+    <Compile Include="Attribute\Enum\EnumColorAttribute.cs" />
+    <Compile Include="Attribute\Enum\EnumLabelAttribute.cs" />
+    <Compile Include="Attribute\Enum\MemberSeparatorAttribute.cs" />
+    <Compile Include="Attribute\IObjectrAttribute.cs" />
+    <Compile Include="Attribute\Member\FieldAttribute.cs" />
+    <Compile Include="Attribute\IMemberAttribute.cs" />
+    <Compile Include="Attribute\Member\LinkMemberAttribute.cs" />
+    <Compile Include="Attribute\Member\LinkMethodAttribute.cs" />
+    <Compile Include="Attribute\Member\MemberAttribute.cs" />
+    <Compile Include="Attribute\Member\MethodAttribute.cs" />
+    <Compile Include="Attribute\Member\LinkPropertyAttribute.cs" />
+    <Compile Include="Attribute\Member\PropertyAttribute.cs" />
+    <Compile Include="Attribute\Object\ObjectAttribute.cs" />
+    <Compile Include="Base\CMD.cs" />
+    <Compile Include="Base\ConsoleManager.cs" />
+    <Compile Include="Base\IConfig.cs" />
+    <Compile Include="Arithmetic\CalcOperator.cs" />
+    <Compile Include="Struct\Digraph.cs" />
+    <Compile Include="Struct\NumberAxis.cs" />
+    <Compile Include="Struct\SquareMatrix.cs" />
+    <Compile Include="Coroutine\AsyncReturn.cs" />
+    <Compile Include="Coroutine\GlobalCoroutine.cs" />
+    <Compile Include="Coroutine\GlobalCoroutine.Call.cs" />
+    <Compile Include="Data\Compress\ZipHelperX.cs" />
+    <Compile Include="Data\Compress\ZipUtility.cs" />
+    <Compile Include="Data\Compress\ZipHelper.cs" />
+    <Compile Include="Coroutine\Delay\CancelHandle.cs" />
+    <Compile Include="Coroutine\Delay\DelayHandle.cs" />
+    <Compile Include="Coroutine\Delay\ICancelHandle.cs" />
+    <Compile Include="Coroutine\Delay\QueueAction.cs" />
+    <Compile Include="dll\User32.cs" />
+    <Compile Include="FileOpr\DirOpr.cs" />
+    <Compile Include="FileOpr\WatcherFileChangeAttribute.cs" />
+    <Compile Include="Http\CqRequest.cs" />
+    <Compile Include="Http\HttpUtil.cs" />
+    <Compile Include="ICCEmbedded\Checksums\Adler32.cs" />
+    <Compile Include="ICCEmbedded\Checksums\BZip2Crc.cs" />
+    <Compile Include="ICCEmbedded\Checksums\CRC32.cs" />
+    <Compile Include="ICCEmbedded\Checksums\IChecksum.cs" />
+    <Compile Include="ICCEmbedded\Core\FileSystemScanner.cs" />
+    <Compile Include="ICCEmbedded\Core\INameTransform.cs" />
+    <Compile Include="ICCEmbedded\Core\IScanFilter.cs" />
+    <Compile Include="ICCEmbedded\Core\NameFilter.cs" />
+    <Compile Include="ICCEmbedded\Core\PathFilter.cs" />
+    <Compile Include="ICCEmbedded\Core\StreamUtils.cs" />
+    <Compile Include="ICCEmbedded\CQ.IO.Compression\BlockType.cs" />
+    <Compile Include="ICCEmbedded\CQ.IO.Compression\CompressionMode.cs" />
+    <Compile Include="ICCEmbedded\CQ.IO.Compression\CopyEncoder.cs" />
+    <Compile Include="ICCEmbedded\CQ.IO.Compression\Crc32Helper.cs" />
+    <Compile Include="ICCEmbedded\CQ.IO.Compression\DeflateInput.cs" />
+    <Compile Include="ICCEmbedded\CQ.IO.Compression\DeflaterManaged.cs" />
+    <Compile Include="ICCEmbedded\CQ.IO.Compression\DeflateStream.cs" />
+    <Compile Include="ICCEmbedded\CQ.IO.Compression\DeflateStreamAsyncResult.cs" />
+    <Compile Include="ICCEmbedded\CQ.IO.Compression\FastEncoder.cs" />
+    <Compile Include="ICCEmbedded\CQ.IO.Compression\FastEncoderStatics.cs" />
+    <Compile Include="ICCEmbedded\CQ.IO.Compression\FastEncoderWindow.cs" />
+    <Compile Include="ICCEmbedded\CQ.IO.Compression\FileFormats.cs" />
+    <Compile Include="ICCEmbedded\CQ.IO.Compression\GZipDecoder.cs" />
+    <Compile Include="ICCEmbedded\CQ.IO.Compression\GZipStream.cs" />
+    <Compile Include="ICCEmbedded\CQ.IO.Compression\GZipUtils.cs" />
+    <Compile Include="ICCEmbedded\CQ.IO.Compression\HuffmanTree.cs" />
+    <Compile Include="ICCEmbedded\CQ.IO.Compression\IDeflater.cs" />
+    <Compile Include="ICCEmbedded\CQ.IO.Compression\Inflater.cs" />
+    <Compile Include="ICCEmbedded\CQ.IO.Compression\InflaterState.cs" />
+    <Compile Include="ICCEmbedded\CQ.IO.Compression\InputBuffer.cs" />
+    <Compile Include="ICCEmbedded\CQ.IO.Compression\InvalidDataException.cs" />
+    <Compile Include="ICCEmbedded\CQ.IO.Compression\Match.cs" />
+    <Compile Include="ICCEmbedded\CQ.IO.Compression\MatchState.cs" />
+    <Compile Include="ICCEmbedded\CQ.IO.Compression\OutputBuffer.cs" />
+    <Compile Include="ICCEmbedded\CQ.IO.Compression\OutputWindow.cs" />
+    <Compile Include="ICCEmbedded\CQ.IO.Compression\SR.cs" />
+    <Compile Include="ICCEmbedded\Encryption\PkzipClassic.cs" />
+    <Compile Include="ICCEmbedded\GZip\GZip.cs" />
+    <Compile Include="ICCEmbedded\GZip\GZipConstants.cs" />
+    <Compile Include="ICCEmbedded\GZip\GZipException.cs" />
+    <Compile Include="ICCEmbedded\GZip\GzipInputStream.cs" />
+    <Compile Include="ICCEmbedded\GZip\GzipOutputStream.cs" />
+    <Compile Include="ICCEmbedded\SharpZipBaseException.cs" />
+    <Compile Include="ICCEmbedded\Zip\Compression\Deflater.cs" />
+    <Compile Include="ICCEmbedded\Zip\Compression\DeflaterConstants.cs" />
+    <Compile Include="ICCEmbedded\Zip\Compression\DeflaterEngine.cs" />
+    <Compile Include="ICCEmbedded\Zip\Compression\DeflaterHuffman.cs" />
+    <Compile Include="ICCEmbedded\Zip\Compression\DeflaterPending.cs" />
+    <Compile Include="ICCEmbedded\Zip\Compression\Inflater.cs" />
+    <Compile Include="ICCEmbedded\Zip\Compression\InflaterDynHeader.cs" />
+    <Compile Include="ICCEmbedded\Zip\Compression\InflaterHuffmanTree.cs" />
+    <Compile Include="ICCEmbedded\Zip\Compression\PendingBuffer.cs" />
+    <Compile Include="ICCEmbedded\Zip\Compression\Streams\DeflaterOutputStream.cs" />
+    <Compile Include="ICCEmbedded\Zip\Compression\Streams\InflaterInputStream.cs" />
+    <Compile Include="ICCEmbedded\Zip\Compression\Streams\OutputWindow.cs" />
+    <Compile Include="ICCEmbedded\Zip\Compression\Streams\StreamManipulator.cs" />
+    <Compile Include="ICCEmbedded\Zip\FastZip.cs" />
+    <Compile Include="ICCEmbedded\Zip\IEntryFactory.cs" />
+    <Compile Include="ICCEmbedded\Zip\ZipConstants.cs" />
+    <Compile Include="ICCEmbedded\Zip\ZipEntry.cs" />
+    <Compile Include="ICCEmbedded\Zip\ZipEntryFactory.cs" />
+    <Compile Include="ICCEmbedded\Zip\ZipException.cs" />
+    <Compile Include="ICCEmbedded\Zip\ZipExtraData.cs" />
+    <Compile Include="ICCEmbedded\Zip\ZipFile.cs" />
+    <Compile Include="ICCEmbedded\Zip\ZipHelperStream.cs" />
+    <Compile Include="ICCEmbedded\Zip\ZipInputStream.cs" />
+    <Compile Include="ICCEmbedded\Zip\ZipNameTransform.cs" />
+    <Compile Include="ICCEmbedded\Zip\ZipOutputStream.cs" />
+    <Compile Include="ICCEmbedded\Zip\ZipStrings.cs" />
+    <Compile Include="Net\P2P\P2PClient.cs" />
+    <Compile Include="Net\P2P\P2PProto_C_S.cs" />
+    <Compile Include="Net\P2P\P2PServer.cs" />
+    <Compile Include="Net\PE\CqClient.cs" />
+    <Compile Include="Net\PE\PEPkg.cs" />
+    <Compile Include="Net\PE\PESession.cs" />
+    <Compile Include="Net\PE\CqServer.cs" />
+    <Compile Include="Net\PE\PETool.cs" />
+    <Compile Include="Net\PingUtil.cs" />
+    <Compile Include="Net\QClient.cs" />
+    <Compile Include="Net\ObjServer.cs" />
+    <Compile Include="Net\RingBuffer.cs" />
+    <Compile Include="Net\ObjClient.cs" />
+    <Compile Include="Proxy\MemberProxy.cs" />
+    <Compile Include="Serialize\Base\Type\MarkSerializeAttribute.cs" />
+    <Compile Include="Serialize\Base\Type\SerializeTypeStyle.cs" />
+    <Compile Include="Serialize\Base\Type\SerializeType.cs" />
+    <Compile Include="Serialize\Base\Type\SerializeTypeUtil.cs" />
+    <Compile Include="Serialize\CSV\CSV.cs" />
+    <Compile Include="Serialize\Custom\CqSerialize.Serializer.cs" />
+    <Compile Include="Serialize\Custom\CqSerialize.cs" />
+    <Compile Include="Serialize\Custom\ICqSerialize.cs" />
+    <Compile Include="Serialize\Custom\ParserFormat.cs" />
+    <Compile Include="Serialize\Custom\SerializeFormat.cs" />
+    <Compile Include="Serialize\Custom\CqSerialize.Parser.cs" />
+    <Compile Include="String\StringUtil.NPOI.cs" />
+    <Compile Include="Struct\Compare\FunctorComparer.cs" />
+    <Compile Include="Struct\List_GC.cs" />
+    <Compile Include="Struct\BufferPool.cs" />
+    <Compile Include="Coroutine\CqCoroutine.cs" />
+    <Compile Include="Struct\CqRange.cs" />
+    <Compile Include="Struct\DataBuffer.cs" />
+    <Compile Include="Struct\TreeNode.cs" />
+    <Compile Include="INotify\INotifyMemberChanged.cs" />
+    <Compile Include="INotify\INotifyListChanged.cs" />
+    <Compile Include="Test\CqDebug.cs" />
+    <Compile Include="Test\LogType.cs" />
+    <Compile Include="Test\ObjectPoolX.cs" />
+    <Compile Include="Coroutine\Tween\Bezier\CqTweenBezier_T.cs" />
+    <Compile Include="Coroutine\Tween\Bezier\CqTweenBezier.cs" />
+    <Compile Include="Coroutine\Tween\Lerp\CqTweenLerp.cs" />
+    <Compile Include="Coroutine\Tween\EaseFun.ConvertDouble.cs" />
+    <Compile Include="Coroutine\Tween\EaseFun.DoubleEase.cs" />
+    <Compile Include="Coroutine\Tween\EaseFunEnum.cs" />
+    <Compile Include="Coroutine\Tween\EaseStyleEnum.cs" />
+    <Compile Include="Event\CqEventAttribute.cs" />
+    <Compile Include="Event\CustomEventArgs.cs" />
+    <Compile Include="FileOpr\CFile.cs" />
+    <Compile Include="FileOpr\FileOpr.cs" />
+    <Compile Include="FileOpr\FileOpr.Encode.cs" />
+    <Compile Include="FileOpr\FileOpr.UpDownLoad.cs" />
+    <Compile Include="FileOpr\WatcherFile.cs" />
+    <Compile Include="Struct\Compare\ComparisonPriority.cs" />
+    <Compile Include="Net\FtpOpr.cs" />
+    <Compile Include="Mouse\MouseButton.cs" />
+    <Compile Include="Net\NetState.cs" />
+    <Compile Include="Net\PacketData.cs" />
+    <Compile Include="Serialize\Base\char_parser\LPascal\TryParseChar.cs" />
+    <Compile Include="Serialize\Base\token\TokenEnumElementAttribute.cs" />
+    <Compile Include="Serialize\Json\IJsonSerialize.cs" />
+    <Compile Include="Serialize\Json\JsonX.cs" />
+    <Compile Include="Serialize\Json\JsonParser.cs" />
+    <Compile Include="Serialize\Json\JsonSerialize.cs" />
+    <Compile Include="String\StringCompress.cs" />
+    <Compile Include="String\StringUtil.Replace.cs" />
+    <Compile Include="Coroutine\Tween\TweenHandleBase.cs" />
+    <Compile Include="Util\AssemblyUtil\AssemblyUtil.Operator.cs" />
+    <Compile Include="Util\AssemblyUtil\CodeDomExpression.cs" />
+    <Compile Include="Util\AssemblyUtil\ISetCallBack.cs" />
+    <Compile Include="Util\AssemblyUtil\ISetGetMemberValue.cs" />
+    <Compile Include="Util\AssemblyUtil\IInvokeMethod.cs" />
+    <Compile Include="Util\System\ArrayUtil.cs" />
+    <Compile Include="Util\System\Diagnostics\ProcessUtil.cs" />
+    <Compile Include="Util\System\Diagnostics\StackTraceUtil.cs" />
+    <Compile Include="Util\System\DictionaryUtil.cs" />
+    <Compile Include="Util\System\DoubleUtil.cs" />
+    <Compile Include="Util\System\EnvironmentUtil.cs" />
+    <Compile Include="Util\System\IO\BinaryReaderUtil.cs" />
+    <Compile Include="Coroutine\Tween\CqTweenCore.cs" />
+    <Compile Include="Coroutine\Tween\Lerp\CqTweenLerp_T.cs" />
+    <Compile Include="Util\AssemblyUtil\AssemblyUtil.Activator.cs" />
+    <Compile Include="Util\AssemblyUtil\AssemblyUtil.Attribute.cs" />
+    <Compile Include="Util\AssemblyUtil\AssemblyUtil.HashType.cs" />
+    <Compile Include="Util\AssemblyUtil\AssemblyUtil.Object.cs" />
+    <Compile Include="Util\AssemblyUtil\AssemblyUtil.Type.cs" />
+    <Compile Include="Util\AssemblyUtil\AssemblyUtil.Method.cs" />
+    <Compile Include="Util\AssemblyUtil\AssemblyUtil.Namespace.cs" />
+    <Compile Include="Util\AssemblyUtil\AssemblyUtil.Program.cs" />
+    <Compile Include="Util\AssemblyUtil\AssemblyUtil.RunTime.cs" />
+    <Compile Include="Util\ColorUtil.cs" />
+    <Compile Include="Util\ConvertUtil.cs" />
+    <Compile Include="Util\System\ConvertUtil.cs" />
+    <Compile Include="Util\ListDataMgr.cs" />
+    <Compile Include="Serialize\Base\Parsing.cs" />
+    <Compile Include="Serialize\Base\token\TokenParser.cs" />
+    <Compile Include="Base\Singleton.cs" />
+    <Compile Include="Serialize\Base\char_parser\LPascal\TryParseCommentLine.cs" />
+    <Compile Include="Serialize\Base\char_parser\LPascal\TryParseKeyword.cs" />
+    <Compile Include="Serialize\Base\char_parser\LPascal\TryParseComment.cs" />
+    <Compile Include="Serialize\Base\char_parser\LPascal\TryParseSign.cs" />
+    <Compile Include="Serialize\Base\char_parser\LPascal\TryParseVariable.cs" />
+    <Compile Include="Serialize\Base\char_parser\LPascal\TryParseString.cs" />
+    <Compile Include="Serialize\Base\char_parser\LPascal\TryParseNumber.cs" />
+    <Compile Include="Serialize\Base\char_parser\CharParser.cs" />
+    <Compile Include="Serialize\Base\token\TokenType.cs" />
+    <Compile Include="Serialize\Byte\BinaryStream.cs" />
+    <Compile Include="Serialize\Torsion\TorsionParser.cs" />
+    <Compile Include="Serialize\Torsion\Torsion.cs" />
+    <Compile Include="Serialize\Base\BaseParser.cs" />
+    <Compile Include="Serialize\Base\ParserMatch.cs" />
+    <Compile Include="Serialize\Base\token\Token.cs" />
+    <Compile Include="Serialize\Torsion\TorsionSerialize.cs" />
+    <Compile Include="Serialize\Xml\XmlUtil.cs" />
+    <Compile Include="String\EscapeString.cs" />
+    <Compile Include="String\FlashCompatibleConvert.cs" />
+    <Compile Include="String\FlashCompatibleTextReader.cs" />
+    <Compile Include="String\StringUtil.cs" />
+    <Compile Include="Util\Backtracking.cs" />
+    <Compile Include="Util\CqRandom.cs" />
+    <Compile Include="Util\System\EnumUtil.cs" />
+    <Compile Include="Struct\Matrix.cs" />
+    <Compile Include="Util\MathUtil\MathUtil.Sort.cs" />
+    <Compile Include="Util\MathUtil\MathUtil.Lerp.cs" />
+    <Compile Include="Util\MathUtil\MathUtil.State.cs" />
+    <Compile Include="Util\NetUtil.cs" />
+    <Compile Include="Util\RandomUtil.cs" />
+    <Compile Include="Util\RegeditUtil.cs" />
+    <Compile Include="Util\RegexUtil.cs" />
+    <Compile Include="Util\SysEnvironment.cs" />
+    <Compile Include="Util\CustomDelegate.cs" />
+    <Compile Include="Util\DllInvoke.cs" />
+    <Compile Include="Util\ListUtil.cs" />
+    <Compile Include="Util\SystemUtil.cs" />
+    <Compile Include="Util\System\IO\FolderUtil.cs" />
+    <Compile Include="Util\System\SingleUtil.cs" />
+    <Compile Include="Util\ThreadUtil.cs" />
+    <Compile Include="Util\Time\CustomDate.cs" />
+    <Compile Include="Util\Time\TimeUtil.Chinese.cs" />
+    <Compile Include="Util\Time\TimeUtil.cs" />
+    <Compile Include="Util\Util.cs" />
+    <Compile Include="Data\CustomHash.cs" />
+    <Compile Include="Util\MathUtil\MathUtil.cs" />
+    <Compile Include="Data\Compress\CompressCRC.cs" />
+    <Compile Include="Data\CRC16.cs" />
+    <Compile Include="Data\Cryptographic.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Util\AssemblyUtil\AssemblyUtil.Member.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Util\MathUtil\MathUtil.Equation.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="String\StringUtil.Encode.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Data\Compress\Zip.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Util\System\EnumUtil.Flag.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Coroutine\GlobalCoroutine.Sleep.cs" />
+    <None Include="ICCEmbedded\CQ.IO.Compression\README.md" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

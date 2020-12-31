@@ -1,0 +1,3 @@
+Editor\Data\Managed\UnityEngine.dll
+Editor\Data\Managed\UnityEditor.dll
+Editor\Data\UnityExtensions\Unity\GUISystem\UnityEngine.UI.dll

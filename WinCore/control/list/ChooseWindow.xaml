@@ -1,0 +1,21 @@
+﻿<Window x:Class="WinCore.ChooseWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WinCore"
+        mc:Ignorable="d"
+        Title="" Width="500" Height="500" FontSize="20" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Window.CommandBindings>
+        <CommandBinding Command="local:ChooseWindow.EscCommand" Executed="OnEscCommand"/>
+    </Window.CommandBindings>
+    <Window.InputBindings>
+        <KeyBinding Gesture ="Esc" Command="local:ChooseWindow.EscCommand" />
+    </Window.InputBindings>
+    <Grid>
+        <ScrollViewer VerticalScrollBarVisibility="Auto"  HorizontalScrollBarVisibility="Auto">
+            <ListBox x:Name="listBox"  Width="400"  Height="400" MouseDoubleClick="listBox_MouseDoubleClick" >
+            </ListBox>
+        </ScrollViewer>
+    </Grid>
+</Window>

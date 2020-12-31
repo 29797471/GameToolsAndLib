@@ -1,0 +1,399 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D0C6F096-3FC1-453F-9EBD-7CB3A994C3FD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WinCore</RootNamespace>
+    <AssemblyName>WinCore</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\解决方案\bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+    <Prefer32Bit>false</Prefer32Bit>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\解决方案\bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.mshtml, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\dll\Microsoft\Microsoft.mshtml.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="ReachFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Printing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Attribute\Base\AttributeTarget.cs" />
+    <Compile Include="Attribute\Base\IControlAttriubte.cs" />
+    <Compile Include="Attribute\ControlProperty\Control\BackgroundAttribute.cs" />
+    <Compile Include="Attribute\ControlProperty\Control\ClickAttribute.cs" />
+    <Compile Include="Attribute\ControlProperty\Control\FontSizeAttribute.cs" />
+    <Compile Include="Attribute\ControlProperty\Control\OrientationAttribute.cs" />
+    <Compile Include="Attribute\ControlProperty\Control\VerticalContentAlignmentAttribute.cs" />
+    <Compile Include="Attribute\ControlProperty\Control\ForegroundAttribute.cs" />
+    <Compile Include="Attribute\ControlProperty\Control\HorizontalContentAlignmentAttribute.cs" />
+    <Compile Include="Attribute\ControlProperty\FrameworkElement\HeightAttribute.cs" />
+    <Compile Include="Attribute\Base\LinkControlPropertyAttribute.cs" />
+    <Compile Include="Attribute\ControlProperty\FrameworkElement\AutoWidthAttribute.cs" />
+    <Compile Include="Attribute\ControlProperty\HeaderedContentControl\HeaderAttribute.cs" />
+    <Compile Include="Attribute\ControlProperty\ListView\GridViewColumnAttribute.cs" />
+    <Compile Include="Attribute\ControlProperty\Selector\SelectedValueAttribute.cs" />
+    <Compile Include="Attribute\ControlProperty\Slider\MaximumAttribute.cs" />
+    <Compile Include="Attribute\ControlProperty\Slider\MinimumAttribute.cs" />
+    <Compile Include="Attribute\ControlProperty\TextBox\VerticalScrollBarVisibilityAttribute.cs" />
+    <Compile Include="Attribute\ControlProperty\TextBox\AutoScrollToBottomAttribute.cs" />
+    <Compile Include="Attribute\ControlProperty\TextBox\IsReadOnlyAttribute.cs" />
+    <Compile Include="Attribute\ControlProperty\UIElement\DragSourceAttribute.cs" />
+    <Compile Include="Attribute\ControlProperty\UIElement\DropHandleAttribute.cs" />
+    <Compile Include="Attribute\ControlProperty\UIElement\DropTargetAttribute.cs" />
+    <Compile Include="Attribute\ControlProperty\UIElement\CommandAttribute.cs" />
+    <Compile Include="Attribute\ControlProperty\Window\TopmostAttribute.cs" />
+    <Compile Include="Attribute\Control\Property\DatePickerAttribute.cs" />
+    <Compile Include="Attribute\Control\Property\ImageAttribute.cs" />
+    <Compile Include="Attribute\Control\Property\ItemsControlAttribute.cs" />
+    <Compile Include="Attribute\Control\Property\ListBoxObjectAttribute.cs" />
+    <Compile Include="Attribute\Control\Property\PanelAttribute.cs" />
+    <Compile Include="Attribute\Control\Property\GroupBoxAttribute.cs" />
+    <Compile Include="Attribute\Control\Property\CheckBoxGroupAttribute.cs" />
+    <Compile Include="Attribute\Control\Property\HtmlTextAttribute.cs" />
+    <Compile Include="Attribute\Control\Property\SliderAttribute.cs" />
+    <Compile Include="Attribute\Control\Property\TreeViewAttribute.cs" />
+    <Compile Include="Attribute\ControlProperty\ItemsControl\DisplayMemberAttribute.cs" />
+    <Compile Include="Attribute\Base\ControlPropertyAttribute.cs" />
+    <Compile Include="Attribute\ControlProperty\Control\DoubleClickAttribute.cs" />
+    <Compile Include="Attribute\ControlProperty\ItemsControl\FilterAttribute.cs" />
+    <Compile Include="Attribute\ControlProperty\FrameworkElement\ToolTipAttribute.cs" />
+    <Compile Include="Attribute\ControlProperty\FrameworkElement\DataContextAttribute.cs" />
+    <Compile Include="Attribute\Control\Property\WrapPanelAttribute.cs" />
+    <Compile Include="Attribute\ListViewHeaderClickAttribute.cs" />
+    <Compile Include="Attribute\ControlProperty\TextBox\AcceptsReturnAttribute.cs" />
+    <Compile Include="Attribute\ControlProperty\TextBox\AcceptsTabAttribute.cs" />
+    <Compile Include="Attribute\ControlProperty\TextBox\TextWrappingAttribute.cs" />
+    <Compile Include="Attribute\Control\Class\EditorAttribute.cs" />
+    <Compile Include="Attribute\Control\Property\ListBoxAttribute.cs" />
+    <Compile Include="Attribute\Control\Property\FolderPathAttribute.cs" />
+    <Compile Include="Attribute\Control\Property\LabelAttribute.cs" />
+    <Compile Include="Attribute\Control\Property\CustomListTextAttribute.cs" />
+    <Compile Include="Attribute\Control\Property\ListViewAttribute.cs" />
+    <Compile Include="Attribute\Control\Property\MenuItemAttribute.cs" />
+    <Compile Include="Attribute\Control\Property\RichTextAttribute.cs" />
+    <Compile Include="Attribute\Control\Property\SelectTreeNodeAttribute.cs" />
+    <Compile Include="Attribute\Control\Property\TabControlAttribute.cs" />
+    <Compile Include="Attribute\ControlProperty\FrameworkElement\MaxHeightAttribute.cs" />
+    <Compile Include="Attribute\ControlProperty\FrameworkElement\MinHeightAttribute.cs" />
+    <Compile Include="Attribute\ControlProperty\FrameworkElement\HorizontalAlignmentAttribute.cs" />
+    <Compile Include="Attribute\ControlProperty\FrameworkElement\VerticalAlignmentAttribute.cs" />
+    <Compile Include="Attribute\ControlProperty\FrameworkElement\WidthAttribute.cs" />
+    <Compile Include="Attribute\ControlProperty\FrameworkElement\TagAttribute.cs" />
+    <Compile Include="Attribute\ControlProperty\FrameworkElement\MarginAttribute.cs" />
+    <Compile Include="Attribute\ControlProperty\FrameworkElement\MaxWidthAttribute.cs" />
+    <Compile Include="Attribute\ControlProperty\FrameworkElement\MinWidthAttribute.cs" />
+    <Compile Include="Attribute\ControlProperty\Selector\SelectedIndexAttribute.cs" />
+    <Compile Include="Attribute\ControlProperty\UIElement\VisibilityAttribute.cs" />
+    <Compile Include="Attribute\Control\Property\ColorBoxAttribute.cs" />
+    <Compile Include="Attribute\ControlProperty\UIElement\IsEnabledAttribute.cs" />
+    <Compile Include="Attribute\Control\Property\RadioButtonGroupAttribute.cs" />
+    <Compile Include="Attribute\Control\Property\UnderLineAttribute.cs" />
+    <Compile Include="Attribute\Base\LinkControlMemberAttribute.cs" />
+    <Compile Include="Attribute\Base\PriorityAttribute.cs" />
+    <Compile Include="Bitmap\ShellIcon.cs" />
+    <Compile Include="ChartParts\Axes\Axis.cs" />
+    <Compile Include="ChartParts\Axes\DateTimeAxis.cs" />
+    <Compile Include="ChartParts\Axes\GenericLinearAxis.cs" />
+    <Compile Include="ChartParts\Axes\LinearAxis.cs" />
+    <Compile Include="ChartParts\Axes\LogarithmicAxis.cs" />
+    <Compile Include="ChartParts\Axes\SeriesAxis.cs" />
+    <Compile Include="ChartParts\ChartTypes.cs" />
+    <Compile Include="ChartParts\GenericDataTemplateSelector.cs" />
+    <Compile Include="ChartParts\GlobalSuppressions.cs" />
+    <Compile Include="ChartParts\Grid\Grid.cs" />
+    <Compile Include="ChartParts\Items\DataView\ColumnChartItemDataView.cs" />
+    <Compile Include="ChartParts\Items\DataView\CurveDataView.cs" />
+    <Compile Include="ChartParts\Items\DataView\HardcodedCurveDataView.cs" />
+    <Compile Include="ChartParts\Items\DataView\IPointMarker.cs" />
+    <Compile Include="ChartParts\Items\DataView\ItemDataView.cs" />
+    <Compile Include="ChartParts\Items\DataView\SampledCurveDataView.cs" />
+    <Compile Include="ChartParts\Items\DataView\ScatteredPointsDataView.cs" />
+    <Compile Include="ChartParts\Items\Data\DataPoint.cs" />
+    <Compile Include="ChartParts\Items\Data\HardcodedCurveData.cs" />
+    <Compile Include="ChartParts\Items\Data\ItemData.cs" />
+    <Compile Include="ChartParts\Items\Data\SampledCurveData.cs" />
+    <Compile Include="ChartParts\Items\Data\ScatteredPointsData.cs" />
+    <Compile Include="ChartParts\Items\Elements\BezierSampledCurve.cs" />
+    <Compile Include="ChartParts\Items\Elements\HardcodedCurve.cs" />
+    <Compile Include="ChartParts\Items\Elements\Item.cs" />
+    <Compile Include="ChartParts\Items\Elements\PolylineSampledCurve.cs" />
+    <Compile Include="ChartParts\Items\Elements\ScatteredPoints.cs" />
+    <Compile Include="ChartParts\Items\Elements\SplineSampledCurve.cs" />
+    <Compile Include="ChartParts\Items\Visuals\BezierSampledCurveVisual.cs" />
+    <Compile Include="ChartParts\Items\Visuals\ChartPointVisual.cs" />
+    <Compile Include="ChartParts\Items\Visuals\ColumnChartItemVisual.cs" />
+    <Compile Include="ChartParts\Items\Visuals\CubicPolynomialPolylineApproximation.cs" />
+    <Compile Include="ChartParts\Items\Visuals\HardcodedCurveVisual.cs" />
+    <Compile Include="ChartParts\Items\Visuals\ItemVisual.cs" />
+    <Compile Include="ChartParts\Items\Visuals\PolylineSampledCurveVisual.cs" />
+    <Compile Include="ChartParts\Items\Visuals\ScatteredPointsVisual.cs" />
+    <Compile Include="ChartParts\Items\Visuals\SplineSampledCurveVisual.cs" />
+    <Compile Include="ChartParts\NumericalRecipes\Complex.cs" />
+    <Compile Include="ChartParts\NumericalRecipes\Polynomial.cs" />
+    <Compile Include="ChartParts\NumericalRecipes\Spline.cs" />
+    <Compile Include="ChartParts\Scales\ChartDateTimeScale.cs" />
+    <Compile Include="ChartParts\Scales\ChartLinearScale.cs" />
+    <Compile Include="ChartParts\Scales\ChartLogarithmicScale.cs" />
+    <Compile Include="ChartParts\Scales\ChartScale.cs" />
+    <Compile Include="ChartParts\Scales\ChartSeriesScale.cs" />
+    <Compile Include="ChartParts\Scales\ScaleTick.cs" />
+    <Compile Include="com\FileLnk.cs" />
+    <Compile Include="control\box\CustomMessageBox.cs" />
+    <Compile Include="control\box\CustomMessageBoxWindow.xaml.cs">
+      <DependentUpon>CustomMessageBoxWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="control\ColorNewUserControl.xaml.cs">
+      <DependentUpon>ColorNewUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="control\ColorUserControl.xaml.cs">
+      <DependentUpon>ColorUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="control\curve\PlayBezierWindow.xaml.cs">
+      <DependentUpon>PlayBezierWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="control\curve\CurveWindow.xaml.cs">
+      <DependentUpon>CurveWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="control\curve\line\AttachedProperties\DragInsideCanvasBehavior.cs" />
+    <Compile Include="control\curve\line\Utils\InterpolationUtils.cs" />
+    <Compile Include="control\curve\line\Utils\ViewUtils.cs" />
+    <Compile Include="control\CustomLabelUserControl.xaml.cs">
+      <DependentUpon>CustomLabelUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="control\MapEditorWindow.xaml.cs">
+      <DependentUpon>MapEditorWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="control\list\CustomListText.xaml.cs">
+      <DependentUpon>CustomListText.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="control\tree\CustomTreeUserControl.xaml.cs">
+      <DependentUpon>CustomTreeUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="control\HotKeyTextBoxUserControl.xaml.cs">
+      <DependentUpon>HotKeyTextBoxUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="control\RichTextUCItem.cs" />
+    <Compile Include="control\RichTextUserControl.xaml.cs">
+      <DependentUpon>RichTextUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="control\UnderLineUserControl.xaml.cs">
+      <DependentUpon>UnderLineUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="convert\DoubleToDoubleConverter.cs" />
+    <Compile Include="convert\RadioBoolToIntConverter.cs" />
+    <Compile Include="drop\DefaultDragHandler.cs" />
+    <Compile Include="drop\DefaultDropHandler.cs" />
+    <Compile Include="drop\DragAdorner.cs" />
+    <Compile Include="drop\DragDrop.cs" />
+    <Compile Include="drop\DragInfo.cs" />
+    <Compile Include="drop\DropInfo.cs" />
+    <Compile Include="drop\DropTargetAdorner.cs" />
+    <Compile Include="drop\DropTargetAdorners.cs" />
+    <Compile Include="drop\DropTargetHighlightAdorner.cs" />
+    <Compile Include="drop\DropTargetInsertionAdorner.cs" />
+    <Compile Include="drop\IDragSource.cs" />
+    <Compile Include="drop\IDropTarget.cs" />
+    <Compile Include="drop\IInvokeProvider.cs" />
+    <Compile Include="drop\Utilities\ItemsControlExtensions.cs" />
+    <Compile Include="drop\Utilities\TypeUtilities.cs" />
+    <Compile Include="drop\Utilities\VisualTreeExtensions.cs" />
+    <Compile Include="Attribute\Control\Class\MenuItemPathAttribute.cs" />
+    <Compile Include="Attribute\Control\Property\ButtonAttribute.cs" />
+    <Compile Include="Attribute\Control\Property\CheckBoxAttribute.cs" />
+    <Compile Include="Attribute\Control\Property\ComboBoxAttribute.cs" />
+    <Compile Include="Attribute\Control\Property\HotKeyAttribute.cs" />
+    <Compile Include="Attribute\Control\Property\FilePathAttribute.cs" />
+    <Compile Include="Attribute\Control\Property\TextBoxAttribute.cs" />
+    <Compile Include="Editor\AreaBoxUserControl.xaml.cs">
+      <DependentUpon>AreaBoxUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Editor\EditorWindow.xaml.cs">
+      <DependentUpon>EditorWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Event\EventArgs.Make.cs" />
+    <Compile Include="Event\EventMgr.Make.cs" />
+    <Compile Include="Input\Hook\HookManager.Mouse.cs" />
+    <Compile Include="Input\Hook\HookManager.Callback.cs" />
+    <Compile Include="Input\Hook\HookManager.Keyboard.cs" />
+    <Compile Include="Input\Hook\HookManager.Mouse.Event.cs" />
+    <Compile Include="Input\Hook\HookManager.Structures.cs" />
+    <Compile Include="Input\Hook\HookManager.Windows.cs" />
+    <Compile Include="Input\Hook\MouseEventExtArgs.cs" />
+    <Compile Include="Interface\ITreeNode.cs" />
+    <Compile Include="Input\SendKey\SendKey.Const.cs" />
+    <Compile Include="Input\SendKey\SendKey.KeyBoard.cs" />
+    <Compile Include="Input\SendKey\SendKey.Mouse.cs" />
+    <Compile Include="Struct\BaseTreeNotifyObject.cs" />
+    <Compile Include="Struct\KeyValue_T.cs" />
+    <Compile Include="Struct\KeyValue.cs" />
+    <Compile Include="Struct\NotifyObject.cs" />
+    <Compile Include="Struct\SingleNotifyObject.cs" />
+    <Compile Include="Struct\SortableObservableCollection.cs" />
+    <Compile Include="Struct\TreeNode.cs" />
+    <Compile Include="timeline\ITimeLineDataItem.cs" />
+    <Compile Include="timeline\ITimeLineManager.cs" />
+    <Compile Include="timeline\TempDataType.cs" />
+    <Compile Include="timeline\TimeLineControl.cs" />
+    <Compile Include="timeline\TimeLineItemControl.cs" />
+    <Compile Include="control\list\ChooseWindow.xaml.cs">
+      <DependentUpon>ChooseWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="convert\NameSpacesTypesConverter.cs" />
+    <Compile Include="util\ClipboardUtil.cs" />
+    <Compile Include="util\ControlUtil.cs" />
+    <Compile Include="Bitmap\LockBitmap.cs" />
+    <Compile Include="util\DependencyObjectUtil.cs" />
+    <Compile Include="util\NotifyIconEx.cs" />
+    <Compile Include="util\TextBoxUtil.cs" />
+    <Compile Include="util\WebBrowserUtil.cs" />
+    <Compile Include="util\WinUtil.Color.cs" />
+    <Compile Include="util\WinUtil.Input.cs" />
+    <Compile Include="util\WinUtil.Draw.cs" />
+    <Compile Include="util\WinUtil.cs" />
+    <Compile Include="convert\BoolToVisibilityConverter.cs" />
+    <Compile Include="util\WinUtil.Search.cs" />
+    <Compile Include="win\CustomInputWindow.xaml.cs">
+      <DependentUpon>CustomInputWindow.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="control\box\CustomMessageBoxWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="control\ColorNewUserControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="control\ColorUserControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="control\curve\PlayBezierWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="control\curve\CurveWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="control\CustomLabelUserControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="control\MapEditorWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="control\list\CustomListText.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="control\tree\CustomTreeUserControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="control\HotKeyTextBoxUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="control\RichTextUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="control\UnderLineUserControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="control\list\ChooseWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Editor\AreaBoxUserControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Editor\EditorWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="win\CustomInputWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Res\add.ico" />
+    <Resource Include="Res\copy.ico" />
+    <Resource Include="Res\delete.ico" />
+    <Resource Include="Res\find.ico" />
+    <Resource Include="Res\import.ico" />
+    <Resource Include="Res\info.ico" />
+    <Resource Include="Res\output.ico" />
+    <Resource Include="Res\paste.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Res\tree\correct.ico" />
+    <Resource Include="Res\tree\error.ico" />
+    <Resource Include="Res\tree\play.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CqCore\CqCore.csproj">
+      <Project>{382d3654-7614-4a95-8c05-9d585a662de5}</Project>
+      <Name>CqCore</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

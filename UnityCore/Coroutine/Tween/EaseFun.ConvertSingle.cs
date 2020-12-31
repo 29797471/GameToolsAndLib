@@ -1,0 +1,89 @@
+﻿using CqCore;
+using System;
+
+namespace UnityEngine
+{
+    public static partial class EaseFun
+    {
+        /// <summary>
+        /// 基于0~1的缓动转缓出
+        /// </summary>
+        public static Func<float, float> ConvertToOut(this System.Func<float, float> fun)
+        {
+            return x => 1 - fun(1 - x);
+        }
+
+        /// <summary>
+        /// 基于0~1的缓动转缓入缓出
+        /// </summary>
+        public static Func<float, float> ConvertToInOut(this System.Func<float, float> fun)
+        {
+            return x =>
+            {
+                if (x <= 0.5)
+                {
+                    return fun(x * 2) / 2;
+                }
+                else
+                {
+                    return 1 - fun(2 * (1 - x)) / 2;
+                }
+            };
+        }
+        public static Func<float, float> GetEase(EaseFunEnum efe, EaseStyleEnum ese)
+        {
+            Func<float, float> fun = null;
+            switch (efe)
+            {
+                case EaseFunEnum.Linear:
+                    fun = LinearEase;
+                    break;
+                case EaseFunEnum.Quadratic:
+                    fun = QuadraticEase;
+                    break;
+                case EaseFunEnum.Cubic:
+                    fun = CubicEase;
+                    break;
+                case EaseFunEnum.Quartic:
+                    fun = QuarticEase;
+                    break;
+                case EaseFunEnum.Quintic:
+                    fun = QuinticEase;
+                    break;
+                case EaseFunEnum.Expo:
+                    fun = ExpoEase;
+                    break;
+                case EaseFunEnum.Back:
+                    fun = BackEase;
+                    break;
+                case EaseFunEnum.Sine:
+                    fun = SineEase;
+                    fun = fun.ConvertToOut();
+                    break;
+                case EaseFunEnum.Circle:
+                    fun = CircleEase;
+                    break;
+                case EaseFunEnum.Elastic:
+                    fun = ElasticEase;
+                    break;
+                case EaseFunEnum.Bounce:
+                    fun = BounceEase;
+                    fun = fun.ConvertToOut();
+                    break;
+            }
+            if (fun == null) return null;
+            switch (ese)
+            {
+                case EaseStyleEnum.EaseIn:
+                    break;
+                case EaseStyleEnum.EaseOut:
+                    fun = fun.ConvertToOut();
+                    break;
+                case EaseStyleEnum.EaseInOut:
+                    fun = fun.ConvertToInOut();
+                    break;
+            }
+            return fun;
+        }
+    }
+}

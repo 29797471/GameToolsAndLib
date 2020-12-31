@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="DevelopTool.CodeEditorUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:WinCore="clr-namespace:WinCore;assembly=WinCore" 
+             mc:Ignorable="d" x:Name="self">
+    <WinCore:UnderLineUserControl x:Name="ctl"
+                                      Click="UnderLineTextUserControl_Click"  
+                                      Width="{Binding ElementName=self,Path=Width}"
+                                      MinWidth="{Binding ElementName=self,Path=MinWidth}"
+                                      VerticalAlignment="Center" HorizontalAlignment="Left" >
+        <WinCore:UnderLineUserControl.ContextMenu>
+            <ContextMenu>
+                <MenuItem Header="查看代码" Click="button_Click_ShowCode">
+                    <MenuItem.Icon>
+                        <Image Source="/WinCore;component/Res/find.ico" Width="20" Height="20"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+            </ContextMenu>
+        </WinCore:UnderLineUserControl.ContextMenu>
+    </WinCore:UnderLineUserControl>
+</UserControl>

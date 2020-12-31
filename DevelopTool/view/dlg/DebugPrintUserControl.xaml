@@ -1,0 +1,15 @@
+﻿<UserControl x:Class="DevelopTool.DebugPrintUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" >
+    <!--取消 '_' 作为加速键的转义字符 不阻挡点击操作-->
+    <Label VerticalAlignment="Bottom" HorizontalAlignment="Center" IsHitTestVisible="False" FontSize="12" >
+        <ContentPresenter x:Name="print"  RecognizesAccessKey="False" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <ContentPresenter.Content>
+                <TextBlock Text="{Binding}" TextAlignment="Left" TextWrapping="Wrap"/>
+            </ContentPresenter.Content>
+        </ContentPresenter>
+    </Label>
+</UserControl>

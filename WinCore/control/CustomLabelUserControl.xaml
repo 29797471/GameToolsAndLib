@@ -1,0 +1,21 @@
+﻿<UserControl x:Class="WinCore.CustomLabelUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WinCore"
+             mc:Ignorable="d" x:Name="self">
+    <ItemsControl  MouseDoubleClick="Label_MouseDoubleClick" >
+        <TextBlock x:Name="textBlock" Text="{Binding ElementName=self,Path=Text}"  VerticalAlignment="Center"  
+                   Width="{Binding ElementName=self,Path=Width}"
+                   MinWidth="{Binding ElementName=self,Path=MinWidth}"
+                   TextWrapping="Wrap"/>
+        <Canvas Margin="-5,-25">
+            <TextBox x:Name="textBox" Text="{Binding ElementName=self,Path=Text}"  LostFocus="textBox_LostFocus" TextWrapping="Wrap"
+                     Width="{Binding ElementName=self,Path=Width}"
+                   MinWidth="{Binding ElementName=self,Path=MinWidth}"
+                     TextChanged="textBox_TextChanged"/>
+        </Canvas>
+        
+    </ItemsControl>
+</UserControl>

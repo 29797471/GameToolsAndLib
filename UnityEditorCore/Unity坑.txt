@@ -1,0 +1,18 @@
+一.用UnityWebRequest发送请求时，用编辑器发送正常，打出Android包再请求就报出UnknownError，查了下是因为Android 28以后不允许直接发送明文，网上查了下有几种解决方案，这里记录一下：
+
+Android本机API确实允许HTTP，至少可以使用curl库。但是，Java API（这是UnityWebRequest当前在幕后使用的）不允许HTTP
+解决办法：
+
+1、需要在清单文件中更新此行android：usesCleartextTraffic =“ true”
+
+2、通过将目标API级别更改为27，可以绕过此问题
+
+3、切换到HTTPS
+
+二.ParticleSystem组件的成员数据结构的数据是存储在组件里面,所以修改数据看上去会很奇怪.
+	例:	var parShape = particleSys.shape;        
+		parShape.box = new Vector3(2, 2, 2); //设置长宽高
+		而parShape发现去是一个数据结构,这样居然会改到particleSys
+
+三.当MenuItem修饰的静态函数,通过右键在Hierarchy回调时,如果是多选GameObject,会产生BUG,被回调多次.
+  解决方式:FixBug.cs

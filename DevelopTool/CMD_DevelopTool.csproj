@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{341CD37A-39D8-46EA-AFF5-C2CA0E8A65C4}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DevelopTool</RootNamespace>
+    <AssemblyName>CMD_DevelopTool</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;CMD</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Res\Images\Icons\cmd.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>DevelopTool.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Aspose.Cells, Version=17.7.0.0, Culture=neutral, PublicKeyToken=9269011db29d841b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\excelReadWrite\Aspose.Cells 17.7\3.5\Aspose.Cells.dll</HintPath>
+    </Reference>
+    <Reference Include="ReachFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Attribute\ControlProperty\ClickToEditCodeAttribute.cs" />
+    <Compile Include="Attribute\ExportAttribute.cs" />
+    <Compile Include="Attribute\FileEditAttribute.cs" />
+    <Compile Include="base\CommentPart.cs" />
+    <Compile Include="base\CustomList.cs" />
+    <Compile Include="base\IAllowOutPut.cs" />
+    <Compile Include="base\ICmdCommand.cs" />
+    <Compile Include="base\IExport.cs" />
+    <Compile Include="base\IExportCode.cs" />
+    <Compile Include="base\IMakeFile.cs" />
+    <Compile Include="base\ProcessUnit.cs" />
+    <Compile Include="base\Setting.cs" />
+    <Compile Include="base\SingleModel.cs" />
+    <Compile Include="Behavior\Action\Exe\KillExe.cs" />
+    <Compile Include="Behavior\Action\Exe\KillLockFile.cs" />
+    <Compile Include="Behavior\Action\Exe\RunExe.cs" />
+    <Compile Include="Behavior\Action\FileOpr\CopyFile.cs" />
+    <Compile Include="Behavior\Action\FileOpr\CopyFolder.cs" />
+    <Compile Include="Behavior\Action\FileOpr\DelFolder.cs" />
+    <Compile Include="Behavior\Action\FileOpr\FolderMd5List.cs" />
+    <Compile Include="Behavior\Action\FileOpr\MakeWord.cs" />
+    <Compile Include="Behavior\Action\FileOpr\Mklink.cs" />
+    <Compile Include="Behavior\Action\FileOpr\ModifyFile.cs" />
+    <Compile Include="Behavior\Action\FileOpr\SVNUpdate.cs" />
+    <Compile Include="Behavior\Action\FileOpr\TempMakeFile.cs" />
+    <Compile Include="Behavior\Action\FileOpr\ZipFolderCommand.cs" />
+    <Compile Include="Behavior\Action\KeyBoardAndMouse\GetMousePos.cs" />
+    <Compile Include="Behavior\Action\KeyBoardAndMouse\RecordInputAction.cs" />
+    <Compile Include="Behavior\Action\KeyBoardAndMouse\SendKeyBoardAction.cs" />
+    <Compile Include="Behavior\Action\KeyBoardAndMouse\SendMouseAction.cs" />
+    <Compile Include="Behavior\Action\KeyBoardAndMouse\SetScreenPos.cs" />
+    <Compile Include="Behavior\Action\KeyBoardAndMouse\WaitKeyAction.cs" />
+    <Compile Include="Behavior\Action\KeyBoardAndMouse\WaitMouseAction.cs" />
+    <Compile Include="Behavior\Action\Net\SendPhoneMessage.cs" />
+    <Compile Include="Behavior\Action\Others\CalcMd5.cs" />
+    <Compile Include="Behavior\Action\Others\ChineseCodecTest.cs" />
+    <Compile Include="Behavior\Action\Others\DoCMD.cs" />
+    <Compile Include="Behavior\Action\Others\DrawCoordinateSystem.cs" />
+    <Compile Include="Behavior\Action\Others\Games.cs" />
+    <Compile Include="Behavior\Action\Others\PrintMessageBox.cs" />
+    <Compile Include="Behavior\Action\Others\RegexTool.cs" />
+    <Compile Include="Behavior\Action\SamplingScreenPixel.cs" />
+    <Compile Include="Behavior\Action\WaitAction.cs" />
+    <Compile Include="Behavior\Composite\CqActiveSelector.cs" />
+    <Compile Include="Behavior\Composite\CqParallel.cs" />
+    <Compile Include="Behavior\Composite\CqParallelSelector.cs" />
+    <Compile Include="Behavior\Composite\CqSelector.cs" />
+    <Compile Include="Behavior\Composite\CqSequence.cs" />
+    <Compile Include="Behavior\Condition\KeyDownCondition.cs" />
+    <Compile Include="Behavior\Condition\MouseDownCondition.cs" />
+    <Compile Include="Behavior\Condition\PixelCompare.cs" />
+    <Compile Include="Behavior\Core\CqBehaviorNode.cs" />
+    <Compile Include="Behavior\Core\CqBehaviorView.cs" />
+    <Compile Include="Behavior\Core\CqCompositeNode.cs" />
+    <Compile Include="Behavior\Decorator\CqRoot.cs" />
+    <Compile Include="Behavior\Decorator\InverterDecorator.cs" />
+    <Compile Include="Behavior\Decorator\ReturnFailure.cs" />
+    <Compile Include="Behavior\Decorator\ReturnSuccess.cs" />
+    <Compile Include="Behavior\Decorator\WhileDecorator.cs" />
+    <Compile Include="Behavior\Variable\ColorVariable.cs" />
+    <Compile Include="Behavior\Variable\ScreenPosVariable.cs" />
+    <Compile Include="MakeFile\MakeFile.cs" />
+    <Compile Include="Others\OpenUnityBox.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Serialize\Proto\ProtoFile.cs" />
+    <Compile Include="Serialize\Proto\ProtoStruct\EnumChild.cs" />
+    <Compile Include="Serialize\Proto\ProtoStruct\ProtoExpression.cs" />
+    <Compile Include="Serialize\Proto\ProtoStruct\ProtoExtensions.cs" />
+    <Compile Include="Serialize\Proto\ProtoStruct\ProtoMessage.cs" />
+    <Compile Include="Serialize\Proto\ProtoStruct\ProtoEnum.cs" />
+    <Compile Include="Serialize\Proto\ProtoStruct\ProtoImport.cs" />
+    <Compile Include="Serialize\Proto\ProtoStruct\ProtoSyntax.cs" />
+    <Compile Include="Serialize\Proto\ProtoStruct\ProtoOption.cs" />
+    <Compile Include="Serialize\Proto\ProtoStruct\ProtoPackage.cs" />
+    <Compile Include="Serialize\UserSetting.cs" />
+    <Compile Include="StartLogic.cs" />
+    <Compile Include="view\dlg\chess\assStructArray.cs" />
+    <Compile Include="view\dlg\chess\Chessman.cs" />
+    <Compile Include="view\dlg\chess\ChessModel.cs" />
+    <Compile Include="view\dlg\chess\ChessPlayer.cs" />
+    <Compile Include="view\dlg\chess\ChessWindow.xaml.cs">
+      <DependentUpon>ChessWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="view\dlg\chess\FiveChessRule.cs" />
+    <Compile Include="view\dlg\chess\ReciveWeightValueAndHandleIt.cs" />
+    <Compile Include="view\dlg\chess\ValueNetwork.cs" />
+    <Compile Include="view\dlg\curve\CoordinateSystemWindow.xaml.cs">
+      <DependentUpon>CoordinateSystemWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="view\dlg\set\OtherSetting.cs" />
+    <Compile Include="view\dlg\set\SettingModel.cs" />
+    <Compile Include="view\ui\code_style\CodeStyleGroup.cs" />
+    <Compile Include="view\ui\code_style\CodeStyleLanguage.cs" />
+    <Compile Include="view\ui\code_style\CodeStyleNode.cs" />
+    <Compile Include="view\ui\code_style\CodeStyleNewModel.cs" />
+    <Compile Include="view\ui\code_style\CodeStyleNewSetting.cs" />
+    <Compile Include="view\ui\code_style\CodeTemplate\CodeEditorUserControl.xaml.cs">
+      <DependentUpon>CodeEditorUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="view\ui\code_style\CodeTemplate\CustomCodeTemplate.cs" />
+    <Compile Include="view\ui\code_style\CodeTemplate\EditorCodeTemplate.cs" />
+    <Compile Include="view\ui\code_style\CodeTemplate\EventArgCodeTemplate.cs" />
+    <Compile Include="view\ui\code_style\CodeTemplate\EventExp.cs" />
+    <Compile Include="view\ui\code_style\CodeTemplate\ExprCodeTemplate.cs" />
+    <Compile Include="view\ui\code_style\CodeTemplate\ValueCodeTemplate.cs" />
+    <Compile Include="view\ui\code_style\CodeTemplate\VarCodeTemplate.cs" />
+    <Compile Include="view\ui\common_struct\CommonStructGroup.cs" />
+    <Compile Include="view\ui\common_struct\CommonStructItem.cs" />
+    <Compile Include="view\ui\common_struct\CommonStructModel.cs" />
+    <Compile Include="view\ui\common_struct\CommonStructNode.cs" />
+    <Compile Include="view\ui\common_struct\CommonStructSetting.cs" />
+    <Compile Include="view\ui\event\struct\EventGroup.cs" />
+    <Compile Include="view\ui\event\struct\EventNode.cs" />
+    <Compile Include="view\ui\excel_new\ExcelNewModel.cs" />
+    <Compile Include="view\ui\excel_new\ExcelNewSetting.cs" />
+    <Compile Include="view\ui\excel_new\struct\ExcelNewData.cs" />
+    <Compile Include="view\ui\excel_new\struct\ExcelNewList.cs" />
+    <Compile Include="view\ui\excel_new\struct\ExcelNewStructItem.cs" />
+    <Compile Include="view\ui\excel_new\struct\SheetNewData.cs" />
+    <Compile Include="view\ui\excel_new\struct\SheetNewDataItem.cs" />
+    <Compile Include="view\ui\excel_struct\ExcelStructModel.cs" />
+    <Compile Include="view\ui\folder\FileNode.cs" />
+    <Compile Include="view\ui\folder\FolderModel.cs" />
+    <Compile Include="view\ui\folder\FolderNode.cs" />
+    <Compile Include="view\ui\folder\FolderSetting.cs" />
+    <Compile Include="view\ui\folder\TreeNodeX.cs" />
+    <Compile Include="view\ui\game_struct\GameStructItem.cs" />
+    <Compile Include="view\ui\game_struct\GameStruct.cs" />
+    <Compile Include="view\ui\game_struct\GameStructModel.cs" />
+    <Compile Include="view\ui\game_struct\GameStructSetting.cs" />
+    <Compile Include="view\ui\guide\struct\GuideAni.cs" />
+    <Compile Include="view\ui\guide\struct\GuideTrigger.cs" />
+    <Compile Include="view\ui\guide\struct\UVData.cs" />
+    <Compile Include="view\ui\level_map\LevelMapEditorWindow.xaml.cs">
+      <DependentUpon>LevelMapEditorWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="view\dlg\curve\MainViewModel.cs" />
+    <Compile Include="view\dlg\curve\PointViewModel.cs" />
+    <Compile Include="view\ui\level_map\LevelMapNode.cs" />
+    <Compile Include="view\ui\level_map\LevelMapNodeItem.cs" />
+    <Compile Include="view\ui\level_map\LevelMapSetting.cs" />
+    <Compile Include="view\ui\level_map\LevelMapModel.cs" />
+    <Compile Include="base\ICustomSerialize.cs" />
+    <Compile Include="Serialize\Table\TableDataFormat.cs" />
+    <Compile Include="view\ui\ai\AIModel.cs" />
+    <Compile Include="view\ui\ai\AINode.cs" />
+    <Compile Include="view\ui\ai\AISetting.cs" />
+    <Compile Include="view\ui\excel_struct\CustomStructSetting.cs" />
+    <Compile Include="view\ui\event\struct\EventStructItem.cs" />
+    <Compile Include="view\ui\event\EventModel.cs" />
+    <Compile Include="view\ui\event\EventSetting.cs" />
+    <Compile Include="view\ui\excel_struct\CustomStruct.cs" />
+    <Compile Include="view\ui\excel_struct\CustomerStructItem.cs" />
+    <Compile Include="view\dlg\help\HelpNavigationWindow.xaml.cs">
+      <DependentUpon>HelpNavigationWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="view\dlg\help\CustomStructHelpPage.xaml.cs">
+      <DependentUpon>CustomStructHelpPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="view\dlg\help\ExcelHelpPage.xaml.cs">
+      <DependentUpon>ExcelHelpPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="view\dlg\help\MenuPage.xaml.cs">
+      <DependentUpon>MenuPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="view\ui\proto\ProtoSetting.cs" />
+    <Compile Include="view\ui\proto\ProtoModel.cs" />
+    <Compile Include="Serialize\Proto\IProtoNode.cs" />
+    <Compile Include="Serialize\Proto\ProtoParser.cs" />
+    <Compile Include="Serialize\Proto\ProtoSerialize.cs" />
+    <Compile Include="view\dlg\set\AllSetting.cs" />
+    <Compile Include="view\ui\shortcut\ShortBtn.cs" />
+    <Compile Include="view\ui\shortcut\ShortcutData.cs" />
+    <Compile Include="view\ui\shortcut\ShortcutModel.cs" />
+    <Compile Include="view\ui\shortcut\ShortcutSetting.cs" />
+    <Compile Include="view\ui\story\StoryData.cs" />
+    <Compile Include="view\ui\story\StorySetting.cs" />
+    <Compile Include="view\ui\story\StoryModel.cs" />
+    <Compile Include="view\ui\story\StoryUserControl.xaml.cs">
+      <DependentUpon>StoryUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="view\ui\guide\GuideSetting.cs" />
+    <Compile Include="base\IModel.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="base\IExpression.cs" />
+    <Compile Include="view\dlg\about\AboutWindow.xaml.cs">
+      <DependentUpon>AboutWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="view\ui\translator\struct\TranslatorNewModelData.cs" />
+    <Compile Include="view\ui\translator\struct\TranslatorNewNode.cs" />
+    <Compile Include="view\ui\translator\TranslatorNewModel.cs" />
+    <Compile Include="view\ui\translator\TranslatorNewSetting.cs" />
+    <Compile Include="view\ui\trigger\struct\TriggerGroup.cs" />
+    <Compile Include="view\ui\trigger\struct\TriggerNode.cs" />
+    <Compile Include="view\ui\trigger\TriggerSetting.cs" />
+    <Compile Include="view\ui\trigger\TriggerModel.cs" />
+    <Page Include="view\dlg\chess\ChessWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="view\dlg\curve\CoordinateSystemWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="view\ui\code_style\CodeTemplate\CodeEditorUserControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="view\ui\level_map\LevelMapEditorWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="view\dlg\help\HelpNavigationWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="view\dlg\help\CustomStructHelpPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="view\dlg\help\ExcelHelpPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="view\dlg\help\MenuPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="view\ui\guide\struct\GuideLink.cs" />
+    <Compile Include="view\ui\guide\struct\GuideNode.cs" />
+    <Compile Include="view\ui\guide\GuideModel.cs" />
+    <Page Include="view\ui\story\StoryUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="view\dlg\about\AboutWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CqCore\CqCore\CqCore.csproj">
+      <Project>{382D3654-7614-4A95-8C05-9D585A662DE5}</Project>
+      <Name>CqCore</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CqCore\WinCore\WinCore.csproj">
+      <Project>{d0c6f096-3fc1-453f-9ebd-7cb3a994c3fd}</Project>
+      <Name>WinCore</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Res\Images\Icons\ai.ico" />
+    <Resource Include="Res\Images\Icons\app.ico" />
+    <Resource Include="Res\Images\Icons\class.ico" />
+    <Resource Include="Res\Images\Icons\code_translation.ico" />
+    <Resource Include="Res\Images\Icons\event.ico" />
+    <Resource Include="Res\Images\Icons\excel.ico" />
+    <Resource Include="Res\Images\Icons\folder.ico" />
+    <Resource Include="Res\Images\Icons\gamecenter.ico" />
+    <Resource Include="Res\Images\Icons\google.ico" />
+    <Resource Include="Res\Images\Icons\guide.ico" />
+    <Resource Include="Res\Images\Icons\hierarchical_structure.ico" />
+    <Resource Include="Res\Images\Icons\map.ico" />
+    <Resource Include="Res\Images\Icons\play.ico" />
+    <Resource Include="Res\Images\Icons\protocol.ico" />
+    <Resource Include="Res\Images\Icons\story.ico" />
+    <Resource Include="Res\Images\Icons\translator.ico" />
+    <Resource Include="Res\Images\Icons\trigger.ico" />
+    <Resource Include="Res\Images\Icons\ui.ico" />
+    <Resource Include="Res\Images\Others\cq128X128.ico" />
+    <Resource Include="Res\Images\Others\ooopic.ico" />
+    <Resource Include="Res\Images\Others\ooopic_1.ico" />
+    <Resource Include="Res\Images\Others\settings.ico" />
+    <Resource Include="Res\Images\Others\tools.ico" />
+    <Resource Include="Res\Images\Others\unity.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Res\Images\Icons\csv.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Res\Images\Icons\cmd.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+      <Target Name="AfterResolveReferences">
+    <ItemGroup>
+      <EmbeddedResource Include="@(ReferenceCopyLocalPaths)" Condition="'%(ReferenceCopyLocalPaths.Extension)' == '.dll'">
+        <LogicalName>%(ReferenceCopyLocalPaths.DestinationSubDirectory)%(ReferenceCopyLocalPaths.Filename)%(ReferenceCopyLocalPaths.Extension)</LogicalName>
+      </EmbeddedResource>
+    </ItemGroup>
+  </Target>
+  -->
+</Project>

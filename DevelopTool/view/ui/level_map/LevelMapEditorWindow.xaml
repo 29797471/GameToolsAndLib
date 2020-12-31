@@ -1,0 +1,60 @@
+﻿<Window x:Class="DevelopTool.LevelMapEditorWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DevelopTool"
+        mc:Ignorable="d"
+        Title="二维数组编辑器" SizeToContent="WidthAndHeight" ResizeMode="NoResize" WindowStartupLocation="CenterScreen"
+        >
+    <Grid   Margin="10,10" >
+        <Grid>
+            <Image x:Name="image" 
+               Loaded="image_Loaded"
+                Stretch="Fill"
+               VerticalAlignment="Top" HorizontalAlignment="Left"/>
+        </Grid>
+
+        <ListBox x:Name="panel"  ItemsSource="{Binding DataList}"
+                 Focusable="False" Foreground="#00FFFFFF" Background="#00FFFFFF" 
+                 HorizontalAlignment="Left"
+                 VerticalAlignment="Top"
+                 Margin="-3,-3"
+                 >
+            <ListBox.ItemsPanel >
+                <ItemsPanelTemplate  >
+                    <WrapPanel x:Name="ww" Focusable="False" IsItemsHost="True"
+                               ItemHeight="{Binding ItemHeightSize}"
+                               ItemWidth="{Binding ItemWidthSize}" Width="{Binding WidthSize}" Height="{Binding HeightSize}"/>
+                </ItemsPanelTemplate>
+            </ListBox.ItemsPanel>
+            <ListBox.ItemTemplate>
+                <HierarchicalDataTemplate>
+                    <Button VerticalAlignment="Center" VerticalContentAlignment="Center"  
+                            Padding="0,0,0,0" Focusable="False" Click="OnChangeSelect" 
+                            Opacity="{Binding Alp}" Background="Transparent"
+                            ToolTip="{Binding Desc}">
+                        <Grid>
+                            <Rectangle Visibility="{Binding Path=Show0}" 
+                                       Width="{Binding Path=CellWidth}" Height="{Binding Path=CellHeight}"
+                                       Fill="{StaticResource FloorCellBrush}" />
+                            <Rectangle Visibility="{Binding Path=Show1}" 
+                                       Width="{Binding Path=CellWidth}" Height="{Binding Path=CellHeight}"
+                                       Fill="{StaticResource MapCellBrush}" />
+                            <Rectangle Visibility="{Binding Path=Show2}"
+                                       Width="{Binding Path=CellWidth}" Height="{Binding Path=CellHeight}"
+                                       Fill="{StaticResource FloorCellHighlightBrush}" />
+                            <!--<Rectangle Width="20" Height="20" Fill="{StaticResource FloorCellBrush}" />
+                            <Rectangle Width="20" Height="20" Fill="{StaticResource GoalActiveCellContentBrush}" />
+                            <Rectangle Width="20" Height="20" Fill="{StaticResource GoalCellContentBrush}"/>
+                            <Rectangle Width="20" Height="20" Fill="{StaticResource FloorCellHighlightBrush}" />
+                            <Rectangle Width="20" Height="20" Fill="{StaticResource PlayerCellContentBrush}"/>
+                            <Rectangle Width="20" Height="20" Fill="{StaticResource TreasureCellContentBrush}" />-->
+                            
+                        </Grid>
+                    </Button>
+                </HierarchicalDataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+    </Grid>
+</Window>
