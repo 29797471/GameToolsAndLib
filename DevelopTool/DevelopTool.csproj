@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -36,7 +36,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\</OutputPath>
+    <OutputPath>..\bin\Debug\</OutputPath>
     <DefineConstants>
     </DefineConstants>
     <ErrorReport>prompt</ErrorReport>
@@ -48,7 +48,7 @@
     <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>bin\</OutputPath>
+    <OutputPath>..\bin\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -383,16 +383,6 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CqCore\CqCore\CqCore.csproj">
-      <Project>{382d3654-7614-4a95-8c05-9d585a662de5}</Project>
-      <Name>CqCore</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\CqCore\WinCore\WinCore.csproj">
-      <Project>{d0c6f096-3fc1-453f-9ebd-7cb3a994c3fd}</Project>
-      <Name>WinCore</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Res\Images\Icons\ai.ico" />
     <Resource Include="Res\Images\Icons\class.ico" />
     <Resource Include="Res\Images\Icons\code_translation.ico" />
@@ -426,7 +416,16 @@
   <ItemGroup>
     <Resource Include="Res\Images\Icons\cmd.ico" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\CqCore\CqCore.csproj">
+      <Project>{382d3654-7614-4a95-8c05-9d585a662de5}</Project>
+      <Name>CqCore</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WinCore\WinCore.csproj">
+      <Project>{d0c6f096-3fc1-453f-9ebd-7cb3a994c3fd}</Project>
+      <Name>WinCore</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <Resource Include="Res\Images\Icons\excel_new.ico" />
   </ItemGroup>

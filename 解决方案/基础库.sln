@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29519.87
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityCore", "..\CqCore\UnityCore\UnityCore.csproj", "{6EF40818-283C-4F9F-9148-D5200288C3E5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityCore", "..\UnityCore\UnityCore.csproj", "{6EF40818-283C-4F9F-9148-D5200288C3E5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityEditorCore", "..\CqCore\UnityEditorCore\UnityEditorCore.csproj", "{18B64FF2-B155-4AB8-AFA5-6932F8530646}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityEditorCore", "..\UnityEditorCore\UnityEditorCore.csproj", "{18B64FF2-B155-4AB8-AFA5-6932F8530646}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CqCore3.5", "..\CqCore\CqCore\CqCore.csproj", "{382D3654-7614-4A95-8C05-9D585A662DE5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CqCore3.5", "..\CqCore\CqCore.csproj", "{382D3654-7614-4A95-8C05-9D585A662DE5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
